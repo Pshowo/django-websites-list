@@ -1,5 +1,16 @@
 # django-websites-list
 
+
+## Uruchomienie aplikacji
+1. `python manage.py shell`
+
+        from app.tasks import load_data
+        load_data()
+
+2.  `docker build . -t myapp`
+3.  `docker run myapp`
+
+
 > Web application with websites list.
 
 ## Requirements:
