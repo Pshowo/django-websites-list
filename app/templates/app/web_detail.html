@@ -1,7 +1,14 @@
 {% extends "app/index.html" %}
 {% block content %}
 <h3>Website - details</h3>
-<hr>
 <a href="{% url 'list' %}">Back</a>
+<hr>
+
+<p><b>Url:</b> {{web.url}}<p>
+<p><b>Title:</b> {{web.title}}<p>
+<p><b>Meta_description:</b> {{web.meta_description}}<p>
+<p><b>Alexa rank:</b> {{web.alexa_rank}}<p>
+<p><b>Category:</b> {{web.category}}<p>
+
 
 {% endblock %}

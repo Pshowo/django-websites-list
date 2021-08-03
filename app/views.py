@@ -29,3 +29,8 @@ class WebPage(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'app/web_detail.html', {"title":"Website detail"})        
+
+def web_detail(request, num):
+    web = Website.objects.filter(id=num).first()
+    context = {"web": web}
+    return render(request, 'app/web_detail.html', context)
