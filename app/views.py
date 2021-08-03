@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.views import View
+from django.views.generic import ListView
 from django.http.response import HttpResponse
+from .models import Website
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 # Create your views here.
 
@@ -14,10 +17,13 @@ def index(request):
     <h1>Websites list</h1>
     """)
 
-class Websites(View):
+class Websites(ListView):
 
-    def get(self, request, *args, **kwargs):
-        return render(request, 'app/websites.html', {"title":"Websites"})
+        queryset = Website.objects.all().order_by('alexa_rank')
+        paginate_by = 25
+        context_object_name = 'websites'
+        template_name = "app/websites.html"
+        # return render(request, 'app/websites.html', {"title":"Websites", "websites":websites})
 
 class WebPage(View):
 
