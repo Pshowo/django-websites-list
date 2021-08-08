@@ -1,7 +1,7 @@
 # django-websites-list
 
 
-## Uruchomienie aplikacji
+## Instruction to start app
 1. `sudo docker-compose up --build`
 2. `sudo docker-compose exec dj_app python manage.py migrate`
 3. `sudo docker-compose exec dj_app python manage.py shell`
@@ -16,7 +16,7 @@
 ## Requirements:
 
 * Django
-* Baza Postgres SQL 
+* Postgres SQL 
 * Celery, Rabbitmq
 
 ### Models:
