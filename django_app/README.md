@@ -2,13 +2,13 @@
 
 
 ## Uruchomienie aplikacji
-1. `python manage.py shell`
+1. `sudo docker-compose up --build`
+2. `sudo docker-compose exec dj_app python manage.py migrate`
+3. `sudo docker-compose exec dj_app python manage.py shell`
 
-        from app.tasks import load_data
-        load_data()
-
-2.  `docker build . -t myapp`
-3.  `docker run myapp`
+        >> from app.tasks import load_data
+        >> load_data()
+        >> exit()
 
 
 > Web application with websites list.
