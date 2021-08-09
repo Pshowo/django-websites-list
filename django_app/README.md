@@ -1,5 +1,6 @@
 # django-websites-list
 
+> Web application with websites list.
 
 ## Instruction to start app
 1. `sudo docker-compose up --build`
@@ -10,8 +11,8 @@
         >> load_data()
         >> exit()
 
+Application is available on: [127.0.0.1:5000](127.0.0.1:5000) or [localhost:5000](localhost:5000)
 
-> Web application with websites list.
 
 ## Requirements:
 
